@@ -108,8 +108,8 @@ Inventory is saved and loaded from a file named `inventory.json` in JSON format.
 3. Run the script:
 
 ```bash
-python inventory_management.py
-
+python main.py
+```
 📎 Example Usage
 Adding a Product:
 
