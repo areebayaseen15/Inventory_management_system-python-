@@ -1,103 +1,115 @@
+# 🛒 Inventory Management System
 
+This is a **Python-based Inventory Management System** using Object-Oriented Programming principles like **abstraction, inheritance, encapsulation, and polymorphism**.  
+It includes a CLI interface to manage different types of products like **Electronics**, **Grocery**, and **Clothing**.
 
-🛒 Inventory Management System
-This is a Python-based Inventory Management System using Object-Oriented Programming principles like abstraction, inheritance, encapsulation, and polymorphism. It includes a CLI interface to manage different types of products like Electronics, Grocery, and Clothing.
+---
 
-📁 Project Structure
-```pgsql
+## 📁 Project Structure
 
 ├── inventory_management.py
 ├── inventory.json
 └── README.md
-```
-📌 Features
-Abstract Base Class: Product with shared functionality
 
-Subclasses: Electronics, Grocery, Clothing with unique attributes
 
-Class: Inventory to manage a collection of products
+---
 
-Save and load inventory to/from a JSON file
+## 📌 Features
 
-CLI Menu to interact with the inventory
+- Abstract Base Class: `Product` with shared functionality  
+- Subclasses: `Electronics`, `Grocery`, `Clothing` with unique attributes  
+- Class: `Inventory` to manage a collection of products  
+- Save and load inventory to/from a JSON file  
+- CLI Menu to interact with the inventory  
 
-🧱 Product Classes
-🔹 Product (Abstract Base Class)
-Common attributes:
-```
-product_id
+---
 
-name
+## 🧱 Product Classes
 
-price
+### 🔹 Product (Abstract Base Class)
 
-quantity_in_stock
+**Common attributes:**
+- `product_id`
+- `name`
+- `price`
+- `quantity_in_stock`
 
-Common methods:
+**Common methods:**
+- `restock(amount)`
+- `sell(quantity)`
+- `get_total_value()`
+- `__str__()`
+- `display_info()` (abstract)
 
-restock(amount)
+---
 
-sell(quantity)
+### 🔹 Electronics
 
-get_total_value()
+- Extra attributes: `warranty_years`, `brand`
 
-__str__()
+### 🔹 Grocery
 
-display_info() (abstract)
-```
+- Extra attribute: `expiry_date`  
+- Extra method: `is_expired()`
 
-🔹 Electronics
-Extra attributes: warranty_years, brand
+### 🔹 Clothing
 
-🔹 Grocery
-Extra attribute: expiry_date
+- Extra attributes: `size`, `material`
 
-Extra method: is_expired()
+---
 
-🔹 Clothing
-Extra attributes: size, material
+## 🏪 Inventory Class
 
-🏪 Inventory Class
 Handles all products using a list and supports:
 
-Add/Remove product
+- Add/Remove product  
+- Search by name or type  
+- Restock/Sell products  
+- Remove expired grocery items  
+- List all products  
+- Calculate total inventory value  
+- Save/load inventory from JSON file  
 
-Search by name or type
+---
 
-Restock/Sell products
+## 💻 CLI Menu Options
 
-Remove expired grocery items
+Add Product
 
-List all products
+Sell Product
 
-Calculate total inventory value
+Search/View Product
 
-Save/load inventory from JSON file
+Save Inventory
 
-💻 CLI Menu Options
-markdown
-Copy
-Edit
-1. Add Product
-2. Sell Product
-3. Search/View Product
-4. Save Inventory
-5. Load Inventory
-6. Restock Product
-7. Remove Expired Grocery Products
-8. Show Total Inventory Value
-9. Exit
-💾 File Persistence
-Inventory is saved and loaded from a file named inventory.json in JSON format.
+Load Inventory
 
-🛠 How to Run
-Make sure you have Python installed.
+Restock Product
 
-Open terminal/command prompt.
+Remove Expired Grocery Products
 
-Run the script:
+Show Total Inventory Value
 
+Exit
+
+
+---
+
+## 💾 File Persistence
+
+Inventory is saved and loaded from a file named `inventory.json` in JSON format.
+
+---
+
+## 🛠 How to Run
+
+1. Make sure you have **Python** installed.  
+2. Open your terminal or command prompt.  
+3. Run the script:
+
+```bash
 python inventory_management.py
+
 📎 Example Usage
 Adding a Product:
 
@@ -108,9 +120,11 @@ Price: 15.99
 Quantity: 20
 Size: M
 Material: Cotton
+
 Saving Inventory:
 
 Option 4 → Save Inventory
+
 📚 Concepts Used
 Object-Oriented Programming (OOP)
 
@@ -126,3 +140,4 @@ CLI-based user interaction
 Areeba Yaseen
 📍 Certified Applied for Cloud Native for Artificial Intelligence
 🔗 LinkedIn | GitHub
+
